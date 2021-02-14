@@ -1,0 +1,29 @@
+{
+  "name": "practice_nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "dependencies": {
+    "ejs": "^3.1.6"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7",
+    "npm-run-all": "^4.1.5"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm-run-all --parallel start:*",
+    "start:nodemon": "nodemon app.js",
+    "start:sync": "browser-sync start --config bs-config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yn-nishi/practice_NodeJS.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yn-nishi/practice_NodeJS/issues"
+  },
+  "homepage": "https://github.com/yn-nishi/practice_NodeJS#readme"
+}

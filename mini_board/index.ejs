@@ -26,6 +26,7 @@
     <h1 class="display-4">メッセージボード</h1>
   </header>
   <div role="main">
+    <p><%= content %></p>
     <p>※メッセージは最大10個まで保管されます。</p>
     <form method="post" action="/">
       <p id="id"></p>
@@ -40,8 +41,8 @@
     </form>
 
     <table class="table">
-      <% for(var i in data) { %>
-      <%- include('data_item', {val:data[i]}) %>
+      <% for(var i of data) { %>
+      <%- include('data_item', {val:i}) %>
       <% } %>
     </table>
   </div>

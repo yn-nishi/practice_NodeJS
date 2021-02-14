@@ -1,0 +1,10 @@
+{"id":"yn-nishi","msg":"テスト12"}
+{"id":"yn-nishi","msg":"テスト12"}
+{"id":"ynynyny","msg":"テスト11"}
+{"id":"ynynyny","msg":"テスト10"}
+{"id":"ynynyny","msg":"テスト9"}
+{"id":"ynynyny","msg":"テスト8"}
+{"id":"ynynyny","msg":"テスト7"}
+{"id":"ynynyny","msg":"テスト6"}
+{"id":"ynynyny","msg":"テスト5"}
+{"id":"ynynyny","msg":"テスト4"}
