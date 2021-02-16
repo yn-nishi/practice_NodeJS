@@ -11,8 +11,11 @@
     "ejs": "~2.6.1",
     "express": "~4.16.1",
     "express-session": "^1.17.1",
+    "express-validator": "^6.9.2",
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1",
+    "sequelize": "^6.5.0",
+    "sequelize-cli": "^6.2.0",
     "sqlite3": "^5.0.1",
     "xml2js": "^0.4.23"
   }
