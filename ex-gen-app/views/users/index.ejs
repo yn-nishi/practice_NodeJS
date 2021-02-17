@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta http-equiv="content-type" 
+    content="text/html; charset=UTF-8">
+  <title><%= title %></title>
+  <link rel="stylesheet" 
+  href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+  crossorigin="anonymous">
+  <link rel='stylesheet' 
+    href='/stylesheets/style.css' />
+</head>
+
+<body class="container">
+
+  <header>
+    <h1 class="display-4">
+      <%= title %></h1>
+  </header>
+  <div role="main">
+    <a href="http://localhost:3000/users/add">追加</a>
+    <table class="table">
+      <% for(var obj of content) { %>
+      <tr>
+        <th><a href="http://localhost:3000/users/edit?id=<%= obj.id %>"><%= obj.id %></a></th>
+        <td><%= obj.name %></td>
+        <td><%= obj.mail %></td>
+        <td><%= obj.age %></td>
+        <td><a href="http://localhost:3000/users/delete?id=<%= obj.id %>">削除</a></td>
+        <!-- <td><%= obj.dataValues.mail %></td> -->
+      </tr>
+      <% } %>
+    </table>
+  </div>
+  <script type="text/javascript">
+  console.log()
+  </script>
+</body>
+
+</html>

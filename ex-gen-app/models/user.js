@@ -11,13 +11,18 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      User.hasMany(models.Board)
     }
   };
   User.init({
-    name: DataTypes.STRING,
-    pass: DataTypes.STRING,
-    mail: DataTypes.STRING,
-    age: DataTypes.INTEGER
+    name: { type: DataTypes.STRING, validate: { notEmpty: true } },
+    pass: { type: DataTypes.STRING, validate: { notEmpty: true } },
+    mail: { type: DataTypes.STRING, validate: { isEmail: true } },
+    age : { type: DataTypes.STRING, validate: { isInt: true, min: 0 } }
+    // name: DataTypes.STRING,
+    // pass: DataTypes.STRING,
+    // mail: DataTypes.STRING,
+    // age: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'User',
