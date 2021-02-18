@@ -11,6 +11,27 @@ router.get('/login', (req, res) => {
   res.render('users/login', data)
 })
 
+router.post('/login', (req, res) => {
+  db.User.findOne({ where: { name: req.body.name, pass: req.body.pass } })
+  .then((user) => {
+    if(user != null) {
+      console.log('req.session.login ni ireru yatu')
+      console.dir(user)
+      req.session.login = user
+      let back = req.session.back
+      if(back == null) {
+        back = '/'
+      }
+      res.redirect(back)
+    } else {
+      var data = {
+        title: 'User/login',
+        content: '<p class="text-danger">名前かパスワードが間違っています</p>'
+      }
+      res.render('users/login', data)
+    }
+  })
+})
 
 router.get('/delete', (req, res) => {
   db.User.findByPk(req.query.id)
